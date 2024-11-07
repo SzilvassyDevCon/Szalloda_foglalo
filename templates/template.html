@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Lekérdezés Eredménye</title>
+</head>
+<body>
+    <h1>Lekérdezés Eredménye</h1>
+    <table border="1">
+        <tr>
+            {% for oszlop in oszlopok %}
+            <th>{{ oszlop }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in eredmeny %}
+        <tr>
+            {% for cell in row %}
+            <td>{{ cell }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
